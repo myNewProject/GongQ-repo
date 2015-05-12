@@ -1,0 +1,31 @@
+
+.post time { 
+	background: #393939; 
+	color:#fff; font-size:20px; 
+	font-weight:bold; 
+	display:inline-block; 
+	text-align: center; 
+	padding:10px;	
+	line-height: 1;	
+	position:relative; 
+	top:-10px; 
+	border-radius:5px 0 5px 5px; 
+	box-shadow: 3px 3px 0 rgba(0,0,0,0.1); 
+}
+.post time:after { 
+	content: ' '; 
+	position: absolute; 
+	width: 0; 
+	height: 0; 
+	right: -10px; 
+	top: 0;	
+	border-width: 5px; 
+	border-style: solid;	
+	border-color: 
+	transparent transparent #000 #000; 
+}
+.post time span { 
+	display:block; 
+	font-weight:normal; 
+	font-size:14px; 
+}
