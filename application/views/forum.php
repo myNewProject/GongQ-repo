@@ -1,44 +1,29 @@
+<link rel="stylesheet" href="<?=site_url('/')?>static/css/qcard.css">
+<link rel="stylesheet" href="<?=site_url('/')?>static/css/coloum.css">
+<script>
+	
 
-<? // poster_num의 개수가 3개가 넘으면 다음줄 생성
-?>
+	$(document).ready(function() {
+		loadingList();
+	});
+
+	function loadingList() {
+		$.ajax({
+			type: 'POST',
+			url: "<?=site_url('/Central/getForum/1')?>",
+			data: { PAGE : '1' },
+			cache: false,
+			async: false
+		})
+		.done(function (html) {
+			$("#tableBody").html(html);
+		});
+	}
+</script>
 
 <div class="row my_form_control">
-	<? //foreach($poster_num as $poster)) ?>
-	<div class="col-sm-6 col-md-4 col-lg-4">
-		<div class="card-example post">
-			<div class="thumbnail">
-				<time> &nbsp;
-				</time>
-				<a href="#" class="capton"><img src="<?=site_url('/')?>static/img/test_img.jpg">
-				<h4 class="list-group-item-heading">큐시즘 채용공고</h4>
-				<p class="list-group-item-text">큐시즘 11기로 들어오세요! 저희들은 당신들을 기다립니다.</p>
-				</a>
-			</div>
-		</div>
+	<script> loadingList(); </script>
+	<div id="tableBody" name="tableBody">
+		<!-- 포럼 일정 -->
 	</div>
-	<div class="col-sm-6 col-md-4 col-lg-4">
-		<div class="card-example post">
-			<div class="thumbnail">
-				<time> &nbsp;
-				</time>
-				<a href="#" class="capton"><img src="<?=site_url('/')?>static/img/test_img.jpg">
-				<h4 class="list-group-item-heading">큐시즘 채용공고</h4>
-				<p class="list-group-item-text">큐시즘 11기로 들어오세요! 저희들은 당신들을 기다립니다.</p>
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-6 col-md-4 col-lg-4">
-		<div class="card-example post">
-			<div class="thumbnail">
-				<time> &nbsp;
-				</time>
-				<a href="#" class="capton"><img src="<?=site_url('/')?>static/img/test_img.jpg">
-				<h4 class="list-group-item-heading">큐시즘 채용공고</h4>
-				<p class="list-group-item-text">큐시즘 11기로 들어오세요! 저희들은 당신들을 기다립니다.</p>
-				</a>
-			</div>
-		</div>
-	</div>
-	
 </div>

@@ -6,20 +6,13 @@ class Auth extends MY_Controller {
         		parent::__construct();
     	}
 
-    	public function login() {
-		$this->_head();
-
-		$this->load->view('login');
-    		$this->_footer();
-    	}
-
 	public function logout() {
 		$this->session->sess_destroy();
 		redirect(site_url('/Central'));
 	}
 
     	public function register() {
-                $this->_head();
+                $this->_head('');
 
                 $this->load->library('form_validation');
  
@@ -65,7 +58,7 @@ class Auth extends MY_Controller {
                     
     		} else {
     			$this->session->set_flashdata('message', '로그인에 실패 했습니다.');
-    			redirect(site_url('/').'auth/login');
+    			redirect(site_url('/Central'));
     		}
     	}
 

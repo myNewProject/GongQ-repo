@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CodeIgniter 연습</title>
+    <title>공큐 포럼</title>
     <meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="<?=site_url('/')?>static/lib/bootstrap/css/bootstrap.min.css" media="screen">
-	<link rel="stylesheet" href="<?=site_url('/')?>static/lib/bootstrap/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="<?=site_url('/')?>static/css/qcard.css">
-	<link rel="stylesheet" href="<?=site_url('/')?>static/css/coloum.css">
+	<!-- <link rel="stylesheet" href="<?=site_url('/')?>static/lib/bootstrap/css/bootstrap-theme.min.css"> -->
 
 	<!-- <link rel="stylesheet" href="<?=site_url('/')?>static/lib/bootstrap/css/bootstrap-responsive.css"> -->
 	<script src="<?=site_url('/')?>static/js/jquery/1.11.2/jquery.js"></script>
@@ -131,7 +129,7 @@
 		<li id="nav-button3" class="dropdown" role="presentation"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Forum <span class="caret"></span></a>
 			<ul class="dropdown-menu" role="menu">
 				<li><a href="<?=site_url('/Central/forum')?>">K-SW포럼</a></li>
-				<li><a href="#">포럼제안</a></li>
+				<li><a href="<?=site_url('/Central/reg_forum')?>">포럼제안</a></li>
 			</ul>
 		</li>
 		<li id="nav-button4" class="dropdown" role="presentation"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Business <span class="caret"></span></a>
@@ -140,7 +138,12 @@
 				<li><a href="#">사업공고</a></li>
 			</ul>
 		</li>
-		<li id="nav-button5" role="presentation"><a href="<?=site_url('/Central/hr')?>">HR</a></li>
+		<li id="nav-button5" class="dropdown" role="presentation"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">HR <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="<?=site_url('/Central/hr')?>">채용공고</a></li>
+				<li><a href="<?=site_url('/Central/intern')?>">청년인턴제</a></li>
+			</ul>
+		</li>
 		<li id="nav-button6" class="dropdown" role="presentation"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Education <span class="caret"></span></a>
 			<ul class="dropdown-menu" role="menu">
 				<li><a href="#">워크샵</a></li>

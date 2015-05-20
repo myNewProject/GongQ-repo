@@ -1,4 +1,5 @@
-
+<link rel="stylesheet" href="<?=site_url('/')?>static/css/qcard.css">
+<link rel="stylesheet" href="<?=site_url('/')?>static/css/coloum.css">
 
 <? // poster_num의 개수가 3개가 넘으면 다음줄 생성
 ?>
